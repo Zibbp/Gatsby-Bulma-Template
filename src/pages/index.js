@@ -1,39 +1,67 @@
-import React from "react";
+import React from 'react';
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import catAndHumanIllustration from '../images/cat-and-human-illustration.svg';
 
 function IndexPage() {
   return (
     <Layout>
       <SEO
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="Home"
+        title='Home'
       />
-
-      <section className="text-center">
-        <img
-          alt="Cat and human sitting on a couch"
-          className="block mx-auto w-1/2"
-          src={catAndHumanIllustration}
-        />
-
-        <h2 className="bg-yellow-400 text-2xl font-bold inline-block my-8 p-3">
-          Hey there! Welcome to your first Gatsby site.
-        </h2>
-
-        <p className="leading-loose">
-          This is a barebones starter for Gatsby styled using{` `}
-          <a
-            className="font-bold no-underline text-gray-900"
-            href="https://tailwindcss.com/"
-          >
-            Tailwind
-          </a>
-          , a utility-first CSS framework.
-        </p>
+      <section class='hero is-info is-large'>
+        <div class='hero-body'>
+          <div class='container'>
+            <h1 class='title'>Large title</h1>
+            <h2 class='subtitle'>Large subtitle</h2>
+          </div>
+        </div>
       </section>
+      <div className='container'>
+        <div class='tile is-ancestor'>
+          <div class='tile is-vertical is-8'>
+            <div class='tile'>
+              <div class='tile is-parent is-vertical'>
+                <article class='tile is-child notification is-primary'>
+                  <p class='title'>Vertical...</p>
+                  <p class='subtitle'>Top tile</p>
+                </article>
+                <article class='tile is-child notification is-warning'>
+                  <p class='title'>...tiles</p>
+                  <p class='subtitle'>Bottom tile</p>
+                </article>
+              </div>
+              <div class='tile is-parent'>
+                <article class='tile is-child notification is-info'>
+                  <p class='title'>Middle tile</p>
+                  <p class='subtitle'>With an image</p>
+                  <figure class='image is-4by3'>
+                    <img src='https://bulma.io/images/placeholders/640x480.png' />
+                  </figure>
+                </article>
+              </div>
+            </div>
+            <div class='tile is-parent'>
+              <article class='tile is-child notification is-danger'>
+                <p class='title'>Wide tile</p>
+                <p class='subtitle'>Aligned with the right tile</p>
+                <div class='content'></div>
+              </article>
+            </div>
+          </div>
+          <div class='tile is-parent'>
+            <article class='tile is-child notification is-success'>
+              <div class='content'>
+                <p class='title'>Tall tile</p>
+                <p class='subtitle'>With even more content</p>
+                <div class='content'></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 }
